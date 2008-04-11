@@ -1,0 +1,12 @@
+<% unless @intro.blank? %>
+  <%= render :partial => 'shared/intro', :locals => { :title => 'Your Exercises', :body => @intro } %>
+<% end %>
+
+<div id="title">
+  <h1>Add an Exercise</h1>
+  <%= render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View all Exercises', :icon => 'book_open', :link => url_for(:action => 'index') } ] } %>
+</div>
+
+<form method="post" action="create<%= "?return_to=#{params[:return_to]}" if params[:return_to] %>">
+  <%= render :partial => 'form', :locals => { :exercise => @exercise } %>
+</form>

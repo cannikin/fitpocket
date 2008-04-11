@@ -1,0 +1,24 @@
+- defaults = { :left => nil, :center => nil, :right => nil }
+- options = defaults.merge(options)
+
+#options
+  #left.link
+    - if options[:left]
+      = link_to(image_tag("/images/icons/#{options[:left][:icon]}.png"), options[:left][:link])
+      = link_to options[:left][:label], options[:left][:link], { :onclick => options[:left][:onclick] }
+    - else
+      &nbsp;
+  #center.link
+    - if options[:center]
+      = link_to(image_tag("/images/icons/#{options[:center][:icon]}.png"), options[:center][:link])
+      = link_to options[:center][:label], options[:center][:link], { :onclick => options[:center][:onclick] }
+    - else
+      &nbsp;
+  #right.link
+    - if options[:right]
+      = link_to(image_tag("/images/icons/#{options[:right][:icon]}.png"), options[:right][:link])
+      = link_to options[:right][:label], options[:right][:link], { :onclick => options[:right][:onclick] }
+    - else
+      &nbsp;
+      
+  .clear

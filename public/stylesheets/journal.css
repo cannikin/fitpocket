@@ -1,0 +1,81 @@
+#textile_reference {
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  margin: 10px 0 20px;
+  padding: 10px;
+  width: 180px;
+  height: 206px;
+  float: right;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 90%; }
+  #textile_reference table {
+    width: 100%; }
+    #textile_reference table caption {
+      font-family: Lucida Grande, sans-serif;
+      font-size: 100%;
+      font-weight: bold;
+      
+      margin: 0 0 10px;
+      padding: 0 0 8px;
+      text-align: left; }
+    #textile_reference table th {
+      text-align: left;
+      border-bottom: 3px double #cccccc;
+      font-family: Lucida Grande, sans-serif;
+      font-size: 80%;
+      font-weight: bold;
+      
+      color: #666666;
+      padding: 0 0 5px; }
+    #textile_reference table td {
+      padding: 5px 0;
+      border-bottom: 1px solid #cccccc;
+      color: #666666; }
+  #textile_reference ul {
+    margin: 0 0 0 1em;
+    padding: 0; }
+
+textarea {
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 100%;
+  
+  line-height: 1.4;
+  width: 620px;
+  height: 220px;
+  margin: 10px 0 20px;
+  padding: 3px;
+  float: left; }
+
+table#list {
+  margin: 1em 0 0; }
+  table#list .date {
+    font-size: 90%;
+    color: #999999;
+    font-style: italic; }
+  table#list .actions {
+    width: 20px; }
+  table#list p {
+    margin: 0 0 .5em; }
+
+#entry {
+  font-family: Garamond, Georgia, Times New Roman, serif;
+  font-size: 90%;
+  
+  line-height: 1.4; }
+
+#options .back {
+  float: left;
+  width: 33%;
+  text-align: left; }
+#options .up {
+  float: left;
+  width: 33%;
+  text-align: center; }
+#options .forward {
+  float: left;
+  width: 33%;
+  text-align: right; }
+#options .add {
+  text-align: right; }
+#options .list {
+  text-align: right; }

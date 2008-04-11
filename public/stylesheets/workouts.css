@@ -1,0 +1,81 @@
+table#list {
+  margin: 0; }
+  table#list .date {
+    font-size: 90%;
+    color: #999999;
+    font-style: italic; }
+  table#list .actions {
+    width: 20px; }
+  table#list p {
+    margin: 0 0 .5em; }
+
+#add_exercise {
+  overflow: hidden; }
+
+#actions .action {
+  margin: 0;
+  padding: .5em 0;
+  width: 100%;
+  overflow: auto; }
+  #actions .action .fieldset {
+    float: left;
+    margin: 0 20px 0 0; }
+  #actions .action .show {
+    float: left;
+    font-size: 120%;
+    font-weight: bold;
+    margin: .1em 0 0; }
+    #actions .action .show .dimension {
+      font-size: 90%;
+      color: #8CDF8B;
+      font-weight: normal; }
+    #actions .action .show.exercise {
+      width: 300px;
+      color: #6F4522;
+      padding: 0 0 0 10px; }
+    #actions .action .show.value {
+      width: 140px;
+      color: #009900; }
+    #actions .action .show.notes {
+      font-size: 80%;
+      color: #999999;
+      font-weight: normal;
+      margin: 0;
+      padding: 3px 0 0 10px;
+      clear: both;
+      float: none; }
+  #actions .action input {
+    margin: 0; }
+    #actions .action input.short {
+      width: 3em;
+      text-align: center; }
+  #actions .action label {
+    display: block;
+    margin: 0;
+    font-size: 90%; }
+  #actions .action .weight_dimension, #actions .action .cardio_dimension {
+    font-size: 80%;
+    color: #999999; }
+  #actions .action optgroup {
+    font-style: normal;
+    font-weight: bold;
+    color: #336699;
+    margin: .5em 0 0 .2em; }
+  #actions .action option {
+    padding: 0 0 0 20px;
+    color: #000000; }
+  #actions .action option.cardio.title {
+    background: transparent url('/images/icons/cardio.png') left center no-repeat;
+    font-weight: bold; }
+  #actions .action option.weight.title {
+    background: transparent url('/images/icons/weight.png') left center no-repeat;
+    font-weight: bold; }
+  #actions .action .options {
+    text-align: right;
+    clear: both;
+    font-size: 80%;
+    padding: 5px 0 0; }
+  #actions .action .edit {
+    float: right;
+    font-size: 80%;
+    padding: 5px 0 0; }

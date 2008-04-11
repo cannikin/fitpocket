@@ -1,0 +1,26 @@
+= error_messages_for 'exercise'
+/- if !@exercise.errors.empty?
+/  %h2 problem!
+
+%label{:for => 'exercise_name'} Exercise Name
+%input{:type => 'text', :id => 'exercise_name', :name => 'exercise[name]', :value => exercise.name}/
+.example Ex. Dumbell Curl, Brisk Jog, Military Press
+
+%label{:for => 'exercise_description'} Description
+%textarea{:id => 'exercise_description', :name => 'exercise[description]'}= exercise.description
+.example Here's where you can remind yourself how to properly perform this exercise. Be as wordy as you want.
+
+%label{:for => 'exercise_category'} Type
+%select{:id => 'exercise_category', :name => 'exercise[category]'}
+  - if exercise.category == 'cardio'
+    %option{:value => 'cardio', :selected => 'selected'} Cardio
+  - else
+    %option{:value => 'cardio'} Cardio
+    
+  - if exercise.category == 'weight'
+    %option{:value => 'weight', :selected => 'selected'} Weight
+  - else
+    %option{:value => 'weight'} Weight
+.example Is this an exercise that works your heart or your muscles?
+  
+= render :partial => 'shared/save', :locals => { :options => { :button_label => 'Save Exercise' } }

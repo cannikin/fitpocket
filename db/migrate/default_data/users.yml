@@ -1,0 +1,9 @@
+admin:
+  id: 1
+  password: admin
+  email: admin@fitpocket.com
+  first_name: Admin
+  last_name: Istrator
+  login: admin
+  gender: m
+  birthday: '1978-04-16'

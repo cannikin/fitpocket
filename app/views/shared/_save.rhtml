@@ -1,0 +1,9 @@
+<% defaults = { :show_cancel => true, :button_label => 'Save', :cancel_label => 'Cancel', :cancel_link => url_for(:action => 'index') } %>
+<% options = defaults.merge(options) %>
+
+<div id="save">
+  <input type="submit" id="commit" value="<%= options[:button_label] %>" />
+  <% if options[:show_cancel] %>
+   or <%= link_to options[:cancel_label], options[:cancel_link] %>
+  <% end %>
+</div>

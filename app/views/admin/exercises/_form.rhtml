@@ -1,0 +1,19 @@
+<%= error_messages_for 'exercise' %>
+
+<!--[form:exercise]-->
+<p><label for="exercise_created_at">Created at</label><br/>
+<%= datetime_select 'exercise', 'created_at'  %></p>
+
+<p><label for="exercise_name">Name</label><br/>
+<%= text_field 'exercise', 'name'  %></p>
+
+<p><label for="exercise_description">Description</label><br/>
+<%= text_area 'exercise', 'description'  %></p>
+
+<p><label for="exercise_category">Category</label><br/>
+<%= text_field 'exercise', 'category'  %></p>
+
+<p><label for="exercise_created_by">Created by</label><br/>
+<%= text_field 'exercise', 'created_by'  %></p>
+<!--[eoform:exercise]-->
+

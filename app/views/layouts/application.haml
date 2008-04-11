@@ -1,0 +1,29 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %title FitPocket.com
+    = javascript_include_tag 'prototype','effects','shared',params[:controller]
+    = stylesheet_link_tag 'shared',params[:controller]
+		
+  %body{ :id => params[:controller] }
+    #container
+      #header
+        %ul#nav
+          %li#exercises_link= link_to 'Exercises', :controller => 'exercises'
+          %li#settings_link= link_to 'Settings', :controller => 'settings'
+          %li#account_link= link_to 'Account', :controller => 'account'
+          %li#logout_link= link_to 'Logout', :controller => 'account', :action => 'logout'
+        %ul#tabs
+          - if current_user && current_user[:show_welcome_tab]
+            %li#welcome_tab= link_to 'Welcome', :controller => 'welcome'
+          %li#workouts_tab= link_to 'Workouts', :controller => 'workouts', :action => 'new'
+          %li#vitals_tab= link_to 'Vitals', :controller => 'vitals', :action => 'new'
+          %li#calendar_tab= link_to 'Calendar', :controller => 'calendar'
+          %li#journal_tab= link_to 'Journal', :controller => 'journal', :action => 'new'
+          %li#reports_tab= link_to 'Reports', :controller => 'reports'
+          
+      #main
+        = yield :layout
+        
+    #footer
+      Keeping track of the details since 2007. Copyright &copy;2007 FitPocket.com

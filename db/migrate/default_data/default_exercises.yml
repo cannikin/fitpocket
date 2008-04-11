@@ -1,0 +1,125 @@
+hammer_curl:
+  id:           1
+  name:         Hammer Curl
+  description:
+  category:     weight
+  
+concentration_curl:
+  id:           2
+  name:         Concentration Curl
+  description:
+  category:     weight
+  
+barbell_curl:
+  id:           3
+  name:         Barbell Curl
+  description:
+  category:     weight
+  
+reverse_grip_barbell_curl:
+  id:           4
+  name:         Reverse-Grip Barbell Curl
+  description:
+  category:     weight
+
+alternating_dumbbell_curl:
+  id:           5
+  name:         Alternating Dumbbell Curl
+  description:
+  category:     weight
+
+barbell_curl:
+  id:           6
+  name:         Incline Dumbbell Curl
+  description:
+  category:     weight
+
+preacher_curl:
+  id:           7
+  name:         Preacher Curl
+  description:
+  category:     weight
+
+dumbbell_kickback:
+  id:           8
+  name:         Dumbbell Kickback
+  description:
+  category:     weight
+
+triceps_extension:
+  id:           9
+  name:         Triceps Extension
+  description:
+  category:     weight
+
+french_curl:
+  id:           10
+  name:         French Curl
+  description:
+  category:     weight
+
+parallel_dip:
+  id:           11
+  name:         Parellel Dip
+  description:
+  category:     weight
+
+forearm_curl:
+  id:           12
+  name:         Forearm Curl
+  description:
+  category:     weight
+  
+walking:
+  id:           13
+  name:         Walking
+  description:
+  category:     cardio
+
+jogging:
+  id:           14
+  name:         Jogging
+  description:
+  category:     cardio
+
+running:
+  id:           15
+  name:         Running
+  description:
+  category:     cardio
+  
+stairclimber:
+  id:           16
+  name:         Stairclimber
+  description:
+  category:     cardio
+
+stationary_bike:
+  id:           17
+  name:         Stationary Bike
+  description:
+  category:     cardio
+
+elliptical_trainer:
+  id:           18
+  name:         Elliptical Trainer
+  description:
+  category:     cardio
+    
+jumprope:
+  id:           19
+  name:         Jumprope
+  description:
+  category:     cardio
+
+kickboxing:
+  id:           20
+  name:         Kickboxing
+  description:
+  category:     cardio
+
+mountain_bike:
+  id:           21
+  name:         Mountain Bike
+  description:
+  category:     cardio

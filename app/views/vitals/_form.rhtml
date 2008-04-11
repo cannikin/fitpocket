@@ -1,0 +1,171 @@
+<table cellspacing="0" class="weight">
+  <tr>
+    <td class="label">
+      <label for="vital_weight">Weight</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('weight_help').show();", :onmouseout => "$('weight_help').hide();" %>
+      <div id="weight_help" class="help" style="display:none"><%= help.vitals_weight_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :weight %> lbs
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_body_fat">Body Fat %</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('body_fat_help').show();", :onmouseout => "$('body_fat_help').hide();" %>
+      <div id="body_fat_help" class="help" style="display:none"><%= help.vitals_body_fat_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :body_fat %> %
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_heart_rate">Resting Heart Rate</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('heart_rate_help').show();", :onmouseout => "$('heart_rate_help').hide();" %>
+      <div id="heart_rate_help" class="help" style="display:none"><%= help.vitals_heart_rate_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :heart_rate %> <dfn title="Beats Per Minute">bpm</dfn>
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_blood_pressure_systolic">Blood Pressure</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('blood_pressure_help').show();", :onmouseout => "$('blood_pressure_help').hide();" %>
+      <div id="blood_pressure_help" class="help" style="display:none"><%= help.vitals_blood_pressure_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :blood_pressure_systolic %> / <%= form.text_field :blood_pressure_diastolic %>
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_sleep">Sleep</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('sleep_help').show();", :onmouseout => "$('sleep_help').hide();" %>
+      <div id="sleep_help" class="help" style="display:none"><%= help.vitals_sleep_help %></div>
+    </td>
+    <td class="input">
+      <select id="vital_sleep_hours" name="sleep_hours">
+        <%= option_tags_for_sleep_hours(vital.sleep) %>
+      </select>
+      <select id="vital_sleep_minutes" name="sleep_minutes">
+        <%= option_tags_for_sleep_minutes(vital.sleep) %>
+      </select>
+    </td>
+  </tr>
+</table>
+
+
+<img src="/images/outline_male.png" alt="Male body outline" id="outline" />
+
+
+<table cellspacing="0" class="measurements">
+  <tr>
+    <td class="label">
+      <label for="vital_neck">Neck</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('neck_help').show();", :onmouseout => "$('neck_help').hide();" %>
+      <div id="neck_help" class="help" style="display:none"><%= help.vitals_neck_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :neck %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label" style="padding-top:20px">
+      <label for="vital_chest">Chest</label>
+    </td>
+    <td class="help" style="padding-top:20px">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('chest_help').show();", :onmouseout => "$('chest_help').hide();" %>
+      <div id="chest_help" class="help" style="display:none"><%= help.vitals_chest_help %></div>
+    </td>
+    <td class="input" style="padding-top:20px">
+      <%= form.text_field :chest %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_bicep">Bicep</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('bicep_help').show();", :onmouseout => "$('bicep_help').hide();" %>
+      <div id="bicep_help" class="help" style="display:none"><%= help.vitals_bicep_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :bicep %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_forearm">Forearm</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('forearm_help').show();", :onmouseout => "$('forearm_help').hide();" %>
+      <div id="forearm_help" class="help" style="display:none"><%= help.vitals_forearm_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :forearm %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label" style="padding-top:20px">
+      <label for="vital_waist">Waist</label>
+    </td>
+    <td class="help" style="padding-top:20px">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('waist_help').show();", :onmouseout => "$('waist_help').hide();" %>
+      <div id="waist_help" class="help" style="display:none"><%= help.vitals_waist_help %></div>
+    </td>
+    <td class="input" style="padding-top:20px">
+      <%= form.text_field :waist %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label">
+      <label for="vital_hips">Hips</label>
+    </td>
+    <td class="help">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('hips_help').show();", :onmouseout => "$('hips_help').hide();" %>
+      <div id="hips_help" class="help" style="display:none"><%= help.vitals_hips_help %></div>
+    </td>
+    <td class="input">
+      <%= form.text_field :hips %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label" style="padding-top:40px">
+      <label for="vital_thigh">Thigh</label>
+    </td>
+    <td class="help" style="padding-top:40px">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('thigh_help').show();", :onmouseout => "$('thigh_help').hide();" %>
+      <div id="thigh_help" class="help" style="display:none"><%= help.vitals_thigh_help %></div>
+    </td>
+    <td class="input" style="padding-top:40px">
+      <%= form.text_field :thigh %> inches
+    </td>
+  </tr>
+  <tr>
+    <td class="label" style="padding-top:60px">
+      <label for="vital_calf">Calf</label>
+    </td>
+    <td class="help" style="padding-top:60px">
+      <%= image_tag '/images/icons/information.png', :class => 'info', :onmouseover => "$('calf_help').show();", :onmouseout => "$('calf_help').hide();" %>
+      <div id="calf_help" class="help" style="display:none"><%= help.vitals_calf_help %></div>
+    </td>
+    <td class="input" style="padding-top:60px">
+      <%= form.text_field :calf %> inches
+    </td>
+  </tr>
+</table>
+<%= render :partial => 'shared/save', :locals => { :options => { :button_label => 'Save Vitals' } } %>

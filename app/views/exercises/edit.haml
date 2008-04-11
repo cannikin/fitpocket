@@ -1,0 +1,9 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Vitals', :body => @intro }
+
+#title
+  %h1 Edit an Exercise
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View All Exercises', :icon => 'book_open', :link => url_for(:action => 'index') }, { :label => 'Add an Exercise', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }
+  
+%form{:method => 'post', :action => "/exercises/update/#{@exercise.id}"}
+  = render :partial => 'form', :locals => { :exercise => @exercise }

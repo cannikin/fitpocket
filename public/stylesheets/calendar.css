@@ -1,0 +1,72 @@
+#calendar {
+	overflow: auto;
+	}
+	
+	#calendar .week {
+		display: block;
+		float: left;
+		clear: left;
+		overflow: auto;
+		border-left: 1px solid #cccccc;
+	}
+	
+		#calendar .week.first .day {
+			border-top: 1px solid #dddddd;
+		}
+	
+	#calendar .day {
+		float: left;
+		width: 5.5em;
+		height: 5.5em;
+		padding: 5px;
+		border: 1px solid #dddddd;
+		border-top: 0;
+		border-left: 0;
+	}
+	
+		#calendar .day .number {
+			font-size: 110%;
+			font-weight: bold;
+			color: #eeeeee;
+			display: block;
+			margin: 0 0 2px;
+		}
+	
+		#calendar .day.this_month .number {
+			color: #bbbbbb;
+		}
+		
+		#calendar .day a.event {
+			font-size: 70%;
+			display: block;
+			margin: 0 0 2px;
+			padding: 2px;
+			text-decoration: none;
+			color: #ffffff;
+			display: block;
+		}
+			
+			#calendar .day a.event.workouts {
+				background-color: #336699;
+			}
+			
+				#calendar .day a.event.workouts:hover {
+					background-color: #6289af;
+				}
+			
+			#calendar .day a.event.vitals {
+				background-color: #990000;
+			}
+			
+				#calendar .day a.event.vitals:hover {
+					background-color: #af4141;
+				}
+			
+			#calendar .day a.event.journal {
+				background-color: #009900;
+			}
+			
+				#calendar .day a.event.journal:hover {
+					background-color: #639f63;
+				}
+		

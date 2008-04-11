@@ -1,0 +1,62 @@
+.show.exercise
+  = act.exercise.name
+  
+- if act.exercise.category == 'weight'
+  .show.value
+    - unless act.value_1.blank?
+      - if act.value_1 % 1 == 0
+        = act.value_1.to_i
+      - else
+        = act.value_1
+      %span.dimension lbs
+    - else
+      &nbsp;
+  .show.value
+    - unless act.value_2.blank?
+      = act.value_2.to_i
+      %span.dimension
+        - if act.value_2 != 1
+          reps
+        - else
+          rep
+    - else
+      &nbsp;
+  .show.value
+    - unless act.value_3.blank?
+      = act.value_3.to_i
+      %span.dimension
+        - if act.value_3 != 1
+          sets
+        - else
+          set
+    - else
+      &nbsp;
+- elsif act.exercise.category == 'cardio'
+  .show.value
+    - unless act.value_1.blank?
+      - if act.value_1 % 1 == 0
+        = act.value_1.to_i
+        %span.dimension minutes
+      - else
+        = act.value_1
+    - else
+      &nbsp;
+  .show.value
+    - unless act.value_2.blank?
+      = act.value_2
+      %span.dimension miles
+    - else
+      &nbsp;
+  .show.value
+    - unless act.value_3.blank?
+      = act.value_3
+      %span.dimension bpm
+    - else
+      &nbsp;
+
+.edit
+  = link_to(image_tag('/images/icons/pencil.png'), {}, :onclick => "workoutsBlock.editAction('action_#{act.id}',true); return false;")
+  / = link_to 'Edit', {}, :onclick => "workoutsBlock.saveAction('action_#{act.id}'); return false;"
+
+- unless act.notes.blank?
+  .show.notes= act.notes

@@ -1,0 +1,33 @@
+<% unless @intro.blank? %>
+  <%= render :partial => 'shared/intro', :locals => { :title => "Your #{params[:controller].capitalize}", :body => @intro } %>
+<% end %>
+
+<div id="title">
+  <h1>New Workout</h1>
+  <%= render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View all Workouts', :icon => 'book_open', :link => url_for(:action => 'index') } ] } %>
+</div>
+
+<div id="actions">
+  <% unless @workout.acts.empty? %>
+    <% @workout.acts.each do |act| %>
+      <% if act.exercise %>
+        <div id="action_<%= act.id %>" class="action">
+          <%= render :partial => 'acts/act', :locals => { :act => act } %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+<% form_for :workout, :url => { :action => 'update' }, :html => { :id => "workouts_form" } do |form| %>
+  <div id="add_exercise">
+    <%= render :partial => 'shared/nav', :locals => { :options => [ { :label => 'Add Another Exercise', :icon => 'add', :onclick => 'workoutsBlock.saveAction(\'\',true); return false;' }, 
+                                                                    { :text => 'or' },
+                                                                    { :label => 'Done!', :icon => 'accept', :onclick => 'workoutsBlock.done(); return false;' } ] } %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  // pull in an action when the page loads
+  window.onload = workoutsBlock.addAction;
+</script>

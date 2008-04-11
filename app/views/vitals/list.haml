@@ -1,0 +1,19 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Vitals', :body => @intro }
+
+#title
+  %h1 Your Vitals
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'Add Vitals', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }
+
+- if @vitals.empty?
+  %span.blank You don't have any vitals entries yet!
+  = link_to 'Add one now', :action => 'new'
+- else
+  %table{ :cellspacing => '0', :id => 'list' }
+    %tr
+    - @vitals.each do |vital|
+      %tr{ :onmouseover => "this.addClassName('selected');", :onmouseout => "this.removeClassName('selected');", :onclick => "location.href='#{url_for(:action => 'show', :id => vital.id)}';" }
+        %td.entry
+          %span.date= format_datetime(vital.created_at,:short)
+          %p
+            = format_vitals_for_list(vital)

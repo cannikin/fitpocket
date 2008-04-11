@@ -1,0 +1,42 @@
+form img {
+  vertical-align: middle;
+  cursor: help; }
+form label {
+  display: inline;
+  font-size: 90%; }
+form input {
+  width: 4em; }
+form table {
+  float: left; }
+form img#outline {
+  display: block;
+  float: left;
+  margin: 0 1em; }
+form td {
+  padding: 4px;
+  vertical-align: middle; }
+  form td.label {
+    text-align: right; }
+  form td.input {
+    font-size: 90%; }
+form div.help {
+  font-size: 90%;
+  width: 300px;
+  padding: .7em;
+  line-height: 1.3;
+  background-color: #ffffcc;
+  border: 3px double #ffcc99;
+  position: absolute; }
+  form div.help strong {
+    display: block; }
+form table.weight {
+  margin: 150px 0 0; }
+  form table.weight div.help {
+    margin: 10px 0 0 20px; }
+form table.measurements {
+  margin: 40px 0 0; }
+  form table.measurements div.help {
+    margin: 5px 0 0 -300px; }
+
+table#list span.title {
+  font-weight: bold; }

@@ -1,0 +1,27 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Journal', :body => @intro }
+
+#title
+  %h1 Your Journal Entries
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'New Journal Entry', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }
+
+- if @journals.empty?
+  %span.blank You don't have any journal entries yet!
+  = link_to 'Add one now', :action => 'new'
+- else
+  %table{ :cellspacing => '0', :id => 'list' }
+
+    - @journals.each do |journal|
+      %tr{ :onmouseover => "this.addClassName('selected');", :onmouseout => "this.removeClassName('selected');", :onclick => "location.href='#{url_for(:action => 'show', :id => journal.id)}';" }
+        %td.entry
+          %span.date= format_datetime(journal.created_at)
+          - if journal.entry.split(' ').length > 40
+            = textilize(journal.entry.split(' ')[0..39].join(' ')+'...')
+          - else
+            = textilize journal.entry
+        /
+          %td.actions
+            = link_to(image_tag('/images/icons/delete.png'), { :action => 'destroy', :id => journal.id }, :confirm => 'Are you sure you want to remove this journal entry?', :method => 'post' )
+
+  - if @journals.length > 10
+    = render :partial => 'shared/add', :locals => { :title => 'New Journal Entry' }

@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Log in to FitPocket</title>
+  
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Lucida Grande, Helvetica, sans-serif;
+      background-color: #dddddd;
+      color: #333333;
+    }
+    
+    h1 {
+      margin: 1em;
+      text-align: center;
+    }
+    
+    #login_container {
+      width: 13em;
+      margin: 3em auto 0;
+      padding: 2em 2em 0;
+      font-size: 140%;
+      border: 10px solid #cccccc;
+      background-color: #eeeeee;
+    }
+    
+      #login_container label {
+        font-weight: bold;
+        margin: 0;
+        display: block;
+      }
+      
+      #login_container input {
+        display: block;
+        font-size: 100%;
+        margin: 0 0 1em;
+      }
+      
+      #login_container input[type='submit'] {
+          width: 5em;
+          padding: .2em;
+          margin: 0 auto;
+        }
+  </style>
+  
+</head>
+
+<body>
+  
+  <%= yield %>
+  
+</body>
+</html>

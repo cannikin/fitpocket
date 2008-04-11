@@ -1,0 +1,174 @@
+overhead_press_with_barbell:
+  id: 21
+  name: Overhead Press with Barbell
+  description: >
+    This move targets your front and side deltoids. Stand with your back straight, your feet shoulder-width apart or slightly further apart.
+    *(A)* Bend your elbows and raise the bar to shoulder level. Keep your elbows pointing down and your chest high.
+    *(B)* Slowly lift the barbell straight over your head. Hold for a second, then slowly lower it to chest level and repeat.
+  category: weight
+  
+upright_row:
+  id: 22
+  name: Upright Row
+  description: >
+    This exercise also strengthens your biceps and forearms.
+    *(A)* Stand upright holding a barbell in both hands, your palms facing down in a narrow grip. Your arms should be full extended in front of you, with the barbell at your upper thighs. Allow your shoulders to relax slightly, but keep your back straight.
+    *(B)* Slowly pull the barbell straight up and tuck it under your chin. Your elbows should be pointing up and out. Hold briefly, then slowly lower the weight.
+  category: weight
+  
+side_deltoid_raise:
+  id: 23
+  name: Side Deltoid Raise
+  description: >
+    This exercise targets your side deltoids.
+    *(A)* Stand upright, arms at your sides, holding a dumbbell in each hand, with your palms facing your body and your elbows slightly bent. Keep your shoulders back, your chest out, and your lower back straight with a slight forward lean. Your feet should be shoulder-width apart.
+    *(B)* Slowly raise both deumbbells in unison in a straight line until they're at shoulder level. Make sure that your elbows are slightly bent, and keep your arms in the same plane as your torso. Hold for a second, then slowly lower your arms to the starting position.
+  category: weight
+  
+lying_triceps_extension:
+  id: 24
+  name: Lying Triceps Extension
+  description: >
+    This exercise works your elbow extensors. Note: Overhead lifts can be dangerous. If your weight plates are removable, make sure the collars are tight. Beginners should use light weights and a spotter. Definitely use a spotter with heavier weights.
+    *(A)* Lie on a bench with your head near one end, keeping your knees bent and your feet flat on the floor. Hold a dumbbell in your right hand, with your right arm extended straight up from your body and your palm facing you feet.
+    *(B)* Keeping your upper arm and your elbow stationary, slowly lower the dumbbell across your upper chest until the end touches your left shoulder. Then slowly extend your arm back to the starting position.
+    Finish the set, then switch arms.
+  category: weight
+  
+barbell_curl:
+  id: 25
+  name: Barbell Curl
+  description: >
+    This move strengthens other elbow flexors too.
+    *(A)* Stand straight with your knees slightly bent. Hold a barbell underhand (palms up), with your hands about shoulder-width apart. Your arms should be extended, and the barbell should be at your thighs.
+    *(B)* Keeping your elbows close to your body, use your biceps to curl the bar slowly up toward your chin. Keep your wrists straight throughout the curl, and don't sway your back or rock your body for momentum. Hold for a second, then lower the barbell slowly with a controlled motion to the starting position.
+  category: weight
+  
+forearm_curl:
+  id: 26
+  name: Forearm Curl
+  description: >
+    This exercise works the wrist flexor muscles on the front of your forearms. It also can be done with both hands and a barbell.
+    *(A)* Sit at the end of a bench with your legs slight farther than hip-width apart. Hold a dumbbell in your left hand, palm up, and rest your right hand on your right thigh. Your left wrist should be slightly over your left knee so that you can bend your wrist through its full range of motion. The top of your left forearm should rest against your thigh. Your upper body should be upright but you may lean slightly into your left leg for comfort.
+    *(B)* Slowly curl the dumbbell in a semicircular motion up toward your body as far as you can without letting your arm rise up off your thigh. At the top of the curl, hold for a second, then lower to the starting position.
+    Finish the set, then switch hands.
+  category: weight
+  
+reverse_forarm_curl:
+  id: 27
+  name: Reverse Forearm Curl
+  description: >
+    This exercise works your wrist extensors, on the back of your forearms. Note: Use a lightly weight for this thand you would for a normal forearm curl.
+    *(A)* Sit at the end of a bench with your legs slightly farther than hip-width apart. Hold a dumbbell in your left hand, palm down, and rest your right hand on your right thigh. Your left wrist should be slightly over our left knee so that you can bend you wrist through its full range of motion. The meaty bottom part of your left forearm should rest against your thigh, and your upper body should be fairly upright, but you may lean slightly into your left leg for comfort.
+    *(B)* Slowly curl the dumbbell in a semicircular motion up toward your body as far as you can without letting your arm rise up off your thigh. At the top of the curl, hold for a second, then lower to the starting position.
+    Finish the set, then switch hands.
+  category: weight
+  
+lateral_lunge_with_barbell:
+  id: 28
+  name: Lateral Lunge with Barbell
+  description: >
+    This move also works your inner and outer thighs. To avoid injury, beginners should use a light weight until they master the movement.
+    *(A)* Balance a barbell behind your neck, resting it on your shoulders. Place your hands and feet slightly farther than shoulder-width apart. Keep your knees unlocked, your toes pointing out slightly, your chest out, your shoulders back, your stomach tight, and your back straight. Your head should be in line with your spine.
+    *(B)* Step to your right, landing heel to toe, pressing your hips down until your right thigh is parallel to the floor. Your right foot should point to the side; don't let your right knee extend past your toes. Keep your left leg extended and your left foot planted firmly on the floor, pointing forward. Your torso should face front. Hold for a second, then push with your right leg and return to the starting position.
+    Lunge to the right until you finish one set, then switch to the left.
+  category: weight
+  
+hack_squat:
+  id: 29
+  name: Hack Squat
+  description: >
+    This variation puts less pressure on your knees and lower back than the regular squat does, but it requires more balance. To avoid injury, start with an unweighted bar, and slowly work up to less weight than for a regular squat as you master the movement.
+    With your feet hip-width apart, stand with a barbell placed directly bhind your heels. Squat down and grip the bar with your palms facing away from your body. Your hands should be slightly farther than shoulder-width apart.
+    *(A)* Stand up, holding the bar at arm's length behind your thighs. Keep your head in line with your body.
+    *(B)* Slowly squat down until your thighs are close to parallel with the floor. Do not allow your knees to extend over your toes. Hold for a second, then slowly rise, keeping your arms fully extended.
+  category: weight
+  
+leg_curl_with_ankle_weights:
+  id: 30
+  name: Leg Curl with Ankle Weights
+  description: >
+    This exercise also works the erector spinae muscles of your lower back.
+    *(A)* Lie on your stomach on a bench with both legs straight out and an ankle weight on each ankle. Your knees should be just past the bench's edge so you can bend your legs up. If necessary, hold on to the bench's legs for support.
+    *(B)* Keeping your feet together and pointed out, slowly curl the weights in a semicircular motion toward your butt until your legs are at about a 90-degree angle. Point your toes up, and don't arch your pelvis or back. Your body should remain flush with the bench. Hold for a second, then slowly lower your legs to the starting position.
+  category: weight
+  
+leg_extension_with_ankle_weights:
+  id: 31
+  name: Leg Extension with Ankle Weights
+  description: >
+    In this exercise, foot positioning can change the way the muscles are worked. try pointing your toes back toward you or straight out to work different parts of your quads.
+    Fasten ankle weight around your ankles
+    *(A)* Sit on a bench, grasping its sides with your hands. Your knees should be bent 90 degrees or slightly more, your toes pointing in front of you.
+    *(B)* Using the sides of the bench for support, slowly straighten your legs by lifint with your andkles and contracting your quadriceps. Don't lock your knees at full extension. Your toes should point up and out at about a 45-degree andle to the floor. Hold for a second, then slowly lower your legs to the starting position.
+  category: weight
+  
+heel_raise_with_dumbbells:
+  id: 32
+  name: Heel Raise with Dumbbells
+  description: >
+    This move specifically works the gastrocnemius muscles in your calves.
+    *(A)* Stand with a dumbbell in each hand. Your feet should be hip-width apart with your toes on a platform raise a couple of inches off the ground. Your heels should be on the floor, and your weight should be on the balls of your feet so that you're leaning forwardslightly. Hold the dumbbells at your sides, with your arms extended down.
+    *(B)* Slowly rise all thew ay up onto your toes. Feel the contraction in our calves and pause briefly at the top. Your arms should remain in position, although your body will probably be more upright than it was at the start. Slowly lower yourself to the starting position.
+  category: weight
+  
+ankle_flexion_with_weight_plate:
+  id: 33
+  name: Ankle Flexion with Weight Plate
+  description: >
+    This exercise strengthens your fee's dorsiflexor muscles, with enable you to lift your foot and toes. Strong dorsiflexors are important in running and other aerobic sports.
+    *(A)* Sit on the end of a bench with your legs together and your feet flat on the floor. Your knees should be bent at a 90-degree angle. Keeping your back stright, lean forward slightly at the waist, holding in place a weight plate that rests across the base of your toes.
+    *(B)* Slowly and steadily lift your toes as high as you can, keeping the weight balanced and your back as straight as you can. Hold for a second, then slowly lower the weight to the starting position.
+  category: weight
+  
+stationary_lunge_with_dumbbells:
+  id: 34
+  name: Stationary Lunge with Dumbbells
+  description: >
+    This exercise gives the quadriceps muscles of your thighs a great workout, too.
+    *(A)* Stand with your head in line with your psine, your back stright, and your feet shoulder-width apart. Hold a dumbbell in each hand, with your arms hanging down and your palms facing your body.
+    *(B)* Take a long step forward with our right foot. Bend your leg until your right thigh is parallel to the floor. Your left leg should extend back with your left knee slightly bent and almost touching the floor. Hold this position for a second.
+    Keep your right foot stationary as you slowly straighten your left leg. Continue bending and straightening your right leg until you finish the set. Then switch legs.
+  category: weight
+  
+bench_press:
+  id: 35
+  name: Bench Press
+  description:
+  category: weight
+  
+dumbbell_fly:
+  id: 36
+  name: Dumbbell Fly
+  description:
+  category: weight
+  
+wide-grip_row:
+  id: 37
+  name: Wide-Grip Row
+  description:
+  category: weight
+  
+dumbbell_swing:
+  id: 38
+  name: Dumbbell Swing
+  description:
+  category: weight
+  
+dumbbell_trunk_twist:
+  id: 39
+  name: Dumbbell Trunk Twist
+  description:
+  category: weight
+  
+oblique_trunk_rotation_with_weight_plate:
+  id: 40
+  name: Oblique Trunk Rotation with Weight Plate
+  description:
+  category: weight
+  
+leg_raise_with_ankle_weights:
+  id: 41
+  name: Leg Raise with Ankle Weights
+  description:
+  category: weight

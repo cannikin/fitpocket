@@ -1,0 +1,32 @@
+<% unless @intro.blank? %>
+  <%= render :partial => 'shared/intro', :locals => { :title => 'Your Calendar', :body => @intro } %>
+<% end %>
+
+<div id="title">
+  <h1>Your Calendar</h1>
+</div>
+
+<div id="calendar">
+  <% day_counter = 1 %>
+  <% @days.each_with_index do |day,index| %>
+    <% if index % 7 == 0 %>
+      <div class="week <%= "first" if index == 0 %>">
+    <% end %>
+  
+    <div id="day_<%= index %>" class="day <%= "this_month" if day[:this_month] %>">
+      <span class="number"><%= day[:number] %></span>
+      <% if day[:events] && !day[:events].empty? %>
+        <% day[:events].each do |key,value| %>
+          <% value.each do |id| %>
+            <%= link_to key.to_s.titleize, { :controller => key.to_s.titleize, :action => 'show', :id => id }, :class => "event #{key}" %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  
+    <% if day_counter % 7 == 0 %>
+      </div>
+    <% end %>
+    <% day_counter += 1 %>
+  <% end %>
+</div>

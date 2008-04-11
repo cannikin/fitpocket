@@ -1,0 +1,9 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Journal', :body => @intro }
+  
+#title
+  %h1 New Journal Entry
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View all Journal Entries', :icon => 'book_open', :link => url_for(:action => 'index') } ] }
+
+%form{ :method => 'post', :action => 'create' }
+  = render :partial => 'form', :locals => { :journal => @journal }

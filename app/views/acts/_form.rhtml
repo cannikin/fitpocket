@@ -1,0 +1,42 @@
+<% form_for :act, :url => { :controller => 'acts', :action => 'create' }, :html => { :id => "form_action_#{@act.id}" } do |form| %>
+  <%= form.hidden_field :id %>
+  <%= form.hidden_field :workout_id %>
+  <div class="fieldset">
+
+    <select id="act_exercise_id" name="act[exercise_id]" onchange="workoutsBlock.selectExercise(this, <%= @act.id %>);">
+      <option value="">Select exercise ...</option>
+      <optgroup label="Weight Exercises">
+        <% @exercises[:weight].each do |exercise| %>
+          <option class="weight" value="<%= exercise.id %>"><%= exercise.name %></option>
+        <% end %>
+      </optgroup>
+      <optgroup label="Cardio Exercises">
+        <% @exercises[:cardio].each do |exercise| %>
+          <option class="cardio" value="<%= exercise.id %>"><%= exercise.name %></option>
+        <% end %>
+      </optgroup>
+      <option value=""></option>
+      <option value="new" class="new">Add New Exercise...</option>
+    </select>
+  </div>
+
+  <div class="fieldset">
+    <%= form.text_field :value_1, :class => 'short' %>
+    <span class="weight_dimension">lbs</span>
+    <span class="cardio_dimension" style="display:none;">minutes</span>
+  </div>
+  <div class="fieldset">
+    <%= form.text_field :value_2, :class => 'short' %>
+    <span class="weight_dimension">reps</span>
+    <span class="cardio_dimension" style="display:none;">miles</span>
+  </div>
+  <div class="fieldset">
+    <%= form.text_field :value_3, :class => 'short' %>
+    <span class="weight_dimension">sets</span>
+    <span class="cardio_dimension" style="display:none;"><dfn title="Beats Per Minute">bpm</dfn></span>
+  </div>
+  <div class="fieldset">
+    <%= form.text_field :notes %>
+  </div>
+
+<% end %>

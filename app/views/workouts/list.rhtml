@@ -1,0 +1,32 @@
+<% if @intro %>
+  <%= render :partial => 'shared/intro', :locals => { :title => "Your #{params[:controller].capitalize}", :body => @intro } %>
+<% end %>
+
+<div id="title">
+  <h1>Your Workouts</h1>
+  <%= render :partial => 'shared/nav', :locals => { :options => [ { :label => 'New Workout', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] } %>
+</div>
+
+<% if @workouts.empty? %>
+
+  <span class="blank">You don't have any workouts yet!</span> <%= link_to 'Add one now', :action => 'new' %>
+
+<% else %>
+
+  <table cellspacing="0" id="list">
+    <% @workouts.each do |workout| %>
+      <tr onmouseover="this.addClassName('selected');" onmouseout="this.removeClassName('selected');" onclick="location.href='<%= url_for(:action => 'show', :id => workout.id) %>';">
+        <td class="entry">
+          <span class="date">Added <%= format_datetime(workout.created_at,:short) %></span>
+  	      <p><%= list_of_exercises_for_workout(workout.exercises) %></span>
+  	    </td>
+  	    <!--
+  	    <td class="actions">
+          <%= link_to(image_tag('/images/icons/delete.png'), { :action => 'destroy', :id => workout.id }, :confirm => 'Are you sure you want to remove this workout?', :method => 'post' ) %>
+  	    </td>
+	      -->
+      </tr>
+    <% end %>
+  </table>
+
+<% end %>

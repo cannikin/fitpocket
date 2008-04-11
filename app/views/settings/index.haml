@@ -1,0 +1,4 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Settings', :body => @intro }
+
+/ add a setting that determines if you see the 'New Journal Entry' page, or the index of all journals

@@ -1,0 +1,19 @@
+<ul class="nav">
+  <% options.each do |option| -%>
+    <% if option -%>
+      <li <% if option[:admin] -%>class="admin"<% end -%>>
+        <% unless option[:text] -%>
+          <% if option[:icon_position] == nil || option[:icon_position] == 'before' -%>
+            <%= link_to(image_tag("/images/icons/#{option[:icon]}.png"), option[:link], { :onclick => option[:onclick] }) %>
+          <% end -%>
+          <%= link_to option[:label], option[:link], { :onclick => option[:onclick] } %>
+          <% if option[:icon_position] == 'after' -%>
+            <%= link_to(image_tag("/images/icons/#{option[:icon]}.png"), option[:link], { :onclick => option[:onclick] }) %>
+          <% end -%>
+        <% else -%>
+          <span><%= option[:text] %></span>
+        <% end -%>
+      </li>
+    <% end -%>
+  <% end -%>
+</ul>

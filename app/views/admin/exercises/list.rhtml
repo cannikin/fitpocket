@@ -1,0 +1,27 @@
+<h1>Listing exercises</h1>
+
+<table>
+  <tr>
+  <% for column in Exercise.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for exercise in @exercises %>
+  <tr>
+  <% for column in Exercise.content_columns %>
+    <td><%=h exercise.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => exercise %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => exercise %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => exercise }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @exercise_pages.current.previous } if @exercise_pages.current.previous %>
+<%= link_to 'Next page', { :page => @exercise_pages.current.next } if @exercise_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New exercise', :action => 'new' %>

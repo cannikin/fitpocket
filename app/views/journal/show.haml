@@ -1,0 +1,11 @@
+- previous_link, next_link = figure_next_and_previous_links('journal entry')
+  
+#title
+  %h1= format_datetime(@journal.created_at)
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View All Journal Entries', :icon => 'book_open', :link => url_for(:action => 'index') }, { :label => 'New Journal Entry', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }
+
+#prev_next
+  = render :partial => 'shared/nav', :locals => { :options => [ previous_link, next_link ] }
+
+#entry
+  = textilize @journal.entry

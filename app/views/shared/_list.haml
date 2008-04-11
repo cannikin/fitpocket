@@ -1,0 +1,11 @@
+#options
+  .list
+    = link_to(image_tag('/images/icons/book_open.png'), :action => 'index')
+    = link_to 'View All Entries', :action => 'index'
+    
+    
+/ Can this be generic enough that you can just call a single shared include and then let it know
+/ what values and what links you want in each of the three section?
+
+/ { :left => { :icon => 'add', :label => 'View All Entries', :link => 'index' },
+/   :right => { :label =>

@@ -1,0 +1,6 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Vitals', :body => @intro }
+
+#title
+  %h1 Your Vitals
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View all Vitals', :icon => 'book_open', :link => url_for(:action => 'index') }, { :label => 'Add Vitals', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }

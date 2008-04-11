@@ -1,0 +1,325 @@
+// !background = #ef944a
+// !container_background = #ffffcc
+// !main_background = #ffffff
+
+!background = #ffffcc
+!container_background = #ef944a
+!main_background = #ffffff
+!intro_background = #dfffdf
+!links = #336699
+!link_highlight = #dfefff
+!page_width = 880px
+
+body
+  :font
+    :family Arial,sans-serif
+  :background-color = !background
+  :margin 0
+  :color #333333
+  
+a
+  :color = !links
+  :padding .1em
+  
+  &:hover
+    :background-color = !link_highlight
+    :text-decoration none
+
+#title
+  :border-bottom 1px dotted #389933
+  :overflow hidden
+  :margin 0 0 10px
+  :padding .5em 0
+  
+  h1
+    :font-size 140%
+    :color #389933
+    :float left
+    :margin 0
+    :padding 0
+
+.nav
+  :font-size 80%
+  :font-weight bold
+  :margin 0
+  :padding 0
+  :list-style none
+  :float right
+  
+  li
+    :float left
+    :margin 4px 0 0 8px
+    
+    span
+      :font-weight normal
+      :color #666666
+    
+    img
+      :vertical-align -4px
+
+    &.admin
+      background-color: #ffffcc
+      border: 1px solid #ffcc99
+      padding: 3px 6px
+      margin-top: 0
+      
+    a
+      :text-decoration none
+      
+    a:hover
+      :text-decoration underline
+      :background-color transparent
+  
+dfn
+  :font-style normal
+  :border-bottom 1px dashed #aaaaaa
+  :cursor help
+
+form
+  :font-size 90%
+  
+label 
+  :display block
+  :margin 15px 0 5px
+  :font-weight bold
+  
+input, textarea, select
+  :border 1px solid #cccccc
+  :font-family Lucida Grande
+  :font-size 90%
+  :padding .1em
+  
+input#commit
+  :display inline
+  :width auto
+  
+textarea
+  :width 400px
+  :height 100px
+  
+img
+  :vertical-align middle
+  :border 0
+  :background-color transparent
+  
+// error messages
+#errorExplanation
+  :margin 1em 0
+  :font-size 80%
+  :border 10px solid #990000
+  
+  h2
+    :font-size 100%
+    :font-weight normal
+    :color #ffffff
+    :background-color #990000
+    :margin 0 0 1em
+    :padding 0 0 10px
+    
+  p
+    :display none
+    
+  ul
+    :margin 0 1em 1em
+    :padding 0
+    :list-style none
+    
+      
+#container
+  :width = !page_width
+  :margin 0 auto
+  :padding 20px
+  :background-color = !container_background
+  
+#header
+
+#nav, #tabs
+  :margin 0 auto
+  :padding 0
+  :list-style none
+  
+  li
+    :float left
+
+#nav
+  :float right
+  :font-size 75%
+  
+  li
+    :margin 0 5px
+    :padding 6px 0
+    
+    a
+      :color #ffffff
+      :text-decoration none
+      
+      &:hover
+        :background-color transparent
+        :text-decoration underline
+    
+body#exercises li#exercises_link, body#settings li#settings_link, body#account li#account_link, body#logout li#logout_link
+  :font-weight bold
+  
+  a
+    :text-decoration none
+  
+#tabs
+  :float left
+  :font-size 85%
+  :margin 0 0 0 10px
+  
+  li
+    :padding 6px
+    
+    a
+      :padding 6px
+      :color #ffffff
+      :text-decoration none
+      
+      &:hover
+        :background-color = !background
+        :color = !container_background
+        :text-decoration none
+        
+body#welcome li#welcome_tab, body#workouts li#workouts_tab, body#vitals li#vitals_tab, body#calendar li#calendar_tab, body#journal li#journal_tab, body#reports li#reports_tab
+  :background-color = !main_background
+  :padding 6px 8px
+  
+  a
+    :font-weight bold
+    :text-decoration none
+    :color = !links
+    
+    &:hover
+      :background-color transparent
+      :text-decoration none
+      :color = !links
+    
+#main
+  :margin 0 auto
+  :padding 20px
+  :background-color = !main_background
+  :clear both
+
+#intro
+  :font-size 80%
+  :line-height 1.5
+  :color #333333
+  :margin 0 0 1em
+  :padding 0
+  :background-color = #ffffcc
+  :border 1px solid #ffcc99
+  
+  #intro_container
+    :margin 1em
+    
+  h2
+    :text-align left
+    :border 0
+    :margin 0 0 .5em
+    :padding 0
+    :color #336699
+  
+  p
+    :margin 0 0 1em
+    
+    .section
+      :font-weight bold
+  
+.blank
+  :color #cccccc
+
+.example
+  :font-size 70%
+  :color #bbbbbb
+  :margin 4px 0
+  
+.selected
+  :background-color = !link_highlight
+  :cursor pointer
+  
+.error
+  :border 2px solid #990000
+
+// site footer
+#footer
+  :width = !page_width
+  :margin 10px auto
+  :font-size 80%
+  :color = !container_background
+  
+.fieldWithErrors
+  :display inline
+  
+  input
+    :border 2px solid #990000
+  
+// --------------------------
+// shared stuff
+// --------------------------
+
+// tables
+table#list
+  :font-size 80%
+  :width 100%
+  :clear both
+
+  th
+    :padding .2em
+    :border-bottom 3px double #aaaaaa
+    :text-align left
+
+  td
+    :padding 4px
+    :border-bottom 1px dotted #cccccc
+    :vertical-align middle
+    
+    &.actions a
+      :background-color transparent
+  
+    img
+      :margin 0 4px 0 0
+
+  .date
+    :font-size 90%
+    :color #999999
+    :font-style italic
+
+  .actions
+    :width 20px
+
+  p
+    :margin 0 0 .5em
+    
+.clear
+  :clear both
+    
+// save bar
+#save
+  :display block
+  :margin 1em 0
+  :padding 1em 0 0
+  :text-align center
+  :border-top 1px dotted #cccccc
+  :font-size 80%
+  :clear both
+  
+  input
+    :font-size 120%
+    :font-weight bold
+    :border 3px double #cccccc
+    :margin 0 .2em
+    
+#prev_next
+  :overflow hidden
+  :margin 0 0 10px
+  
+  .nav
+    :display block
+    :text-align center
+    :float none
+    
+    li
+      :display inline
+      :float none
+      :margin 0 1em

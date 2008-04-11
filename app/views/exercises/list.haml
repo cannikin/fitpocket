@@ -1,0 +1,36 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Exercises', :body => @intro }
+
+#title
+  %h1 Your Exercises
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'Add an Exercise', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }
+
+- if @exercises.empty?
+  %span.blank You don't have any exercises!
+  = link_to 'Add one now', :action => 'new'
+- else
+  %table{ :cellspacing => '0', :id => 'list' }
+    %tr
+      %th.name Exercise
+      %th.description Description
+      %th.actions &nbsp;
+
+      - @exercises.each do |exercise|
+        %tr{ :onmouseover => "this.addClassName('selected');", :onmouseout => "this.removeClassName('selected');", :onclick => "location.href='#{url_for(:action => 'show', :id => exercise.id)}';" }
+          %td.name
+            - if exercise.category == 'weight'
+              = image_tag '/images/icons/weight.png', :alt => 'weight', :title => 'Weight exercise'
+            - elsif exercise.category == 'cardio'
+              = image_tag '/images/icons/cardio.png', :alt => 'cardio', :title => 'Cardio exercise'
+            = exercise.name
+          %td.description
+            - if exercise.description.blank?
+              %span.blank (none)
+            - else
+              - if exercise.description.split(' ').length > 12
+                = "#{exercise.description.split(' ')[0..11].join(' ')}..."
+              - else
+                = exercise.description
+          %td.actions
+            = link_to(image_tag('/images/icons/chart_curve.png'), { :controller => 'reports', :action => 'show', :exercise_id => exercise.id })
+            = link_to(image_tag('/images/icons/delete.png'), { :action => 'destroy', :id => exercise.id }, :confirm => 'Are you sure you want to remove this exercise?', :method => 'post' )

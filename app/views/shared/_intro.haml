@@ -1,0 +1,5 @@
+#intro
+  #intro_container
+    %h2= title
+    = body
+    %div= link_to 'Thanks, don\'t show me this text anymore', {}, :onclick => "appBlock.removeIntro('#{params[:controller]}'); return false;"

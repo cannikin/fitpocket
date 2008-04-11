@@ -1,0 +1,25 @@
+<% if @intro %>
+  <%= render :partial => 'shared/intro', :locals => { :title => "Your #{params[:controller].capitalize}", :body => @intro } %>
+<% end %>
+
+<% previous_link, next_link = figure_next_and_previous_links('workout')%>
+
+<div id="title">
+  <h1>Workout on <%= format_datetime(@workout.created_at) %></h1>
+  <%= render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View All Workouts', :icon => 'book_open', :link => url_for(:action => 'index') }, 
+                                                                  { :label => 'New Workout', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] } %>
+</div>
+
+<div id="prev_next">
+  <%= render :partial => 'shared/nav', :locals => { :options => [ previous_link, next_link ] } %>
+</div>
+
+<div id="actions">
+  <% @workout.acts.each do |act| %>
+    <div id="<%= act.id %>" class="action">
+      <% unless act.exercise_id.blank? %>
+        <%= render :partial => 'acts/act', :locals => { :act => act } %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

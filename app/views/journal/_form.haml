@@ -1,0 +1,36 @@
+= error_messages_for :journal
+
+#textile_reference
+  %table{ :cellspacing => '0' }
+    %caption Formatting Quick Reference
+    %tr
+      %th Type This
+      %th Looks Like This
+    %tr
+      %td.code _sometext_
+      %td.output 
+        %em sometext
+    %tr 
+      %td.code *sometext*
+      %td.output 
+        %strong sometext
+    %tr 
+      %td.code +sometext+
+      %td.output 
+        %ins sometext
+    %tr
+      %td.code
+        * Item 1
+        %br/
+        * Item 2
+        %br/
+        * Item 3
+      %td.output
+        %ul
+          %li Item 1
+          %li Item 2
+          %li Item 3
+
+%textarea{ :id => 'journal_entry', :name => 'journal[entry]' }= journal.entry
+
+= render :partial => 'shared/save', :locals => { :options => { :button_label => 'Save Journal Entry' } }

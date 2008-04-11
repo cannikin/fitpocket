@@ -1,0 +1,21 @@
+- unless @intro.blank?
+  = render :partial => 'shared/intro', :locals => { :title => 'Your Exercises', :body => @intro }
+
+#title
+  %h1= @exercise.name
+  = render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View All Exercises', :icon => 'book_open', :link => url_for(:action => 'index') }, { :label => 'Add an Exercise', :icon => 'add', :link => url_for(:action => 'new'), :admin => true } ] }
+ 
+#type
+  - if @exercise.category == 'weight'
+    = image_tag '/images/icons/weight.png'
+  - else
+    = image_tag '/images/icons/cardio.png'
+  = @exercise.category.capitalize
+
+%p#description
+  - if @exercise.description.blank?
+    %span.blank
+      There is no description for this exercise.
+      = link_to 'Add a Description', :action => 'edit', :id => @exercise.id
+  - else
+    = @exercise.description

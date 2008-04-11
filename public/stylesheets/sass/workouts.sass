@@ -1,0 +1,105 @@
+table#list
+  :margin 0
+
+  .date
+    :font-size 90%
+    :color #999999
+    :font-style italic
+    
+  .actions
+    :width 20px
+    
+  p
+    :margin 0 0 .5em
+
+#add_exercise
+  :overflow hidden
+
+#actions
+  
+  .action
+    :margin 0
+    :padding .5em 0
+    / :border-top 1px dotted #cccccc
+    :width 100%
+    :overflow auto
+  
+    .fieldset
+      :float left
+      :margin 0 20px 0 0 
+      
+    .show
+      :float left
+      :font-size 120%
+      :font-weight bold
+      :margin .1em 0 0
+      
+      .dimension
+        :font-size 90%
+        :color #8CDF8B
+        :font-weight normal
+      
+      &.exercise
+        :width 300px
+        :color #6F4522
+        :padding 0 0 0 10px
+        
+      &.value
+        :width 140px
+        :color #009900
+              
+      &.notes
+        :font-size 80%
+        :color #999999
+        :font-weight normal
+        :margin 0
+        :padding 3px 0 0 10px
+        :clear both
+        :float none
+  
+    input
+      :margin 0
+      
+      &.short
+        :width 3em
+        :text-align center
+    
+    label
+      :display block
+      :margin 0
+      :font-size 90%
+      
+    .weight_dimension, .cardio_dimension
+      :font-size 80%
+      :color #999999
+      
+    select
+    
+    optgroup
+      :font-style normal
+      :font-weight bold
+      :color #336699
+      :margin .5em 0 0 .2em
+      
+    option
+      :padding 0 0 0 20px
+      :color #000000
+      
+    option.cardio.title
+      :background transparent url('/images/icons/cardio.png') left center no-repeat
+      :font-weight bold
+      
+    option.weight.title
+      :background transparent url('/images/icons/weight.png') left center no-repeat
+      :font-weight bold
+      
+    .options
+      :text-align right
+      :clear both
+      :font-size 80%
+      :padding 5px 0 0
+      
+    .edit
+      :float right
+      :font-size 80%
+      :padding 5px 0 0

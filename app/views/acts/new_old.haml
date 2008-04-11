@@ -1,0 +1,35 @@
+%div{ :id => "action_#{params[:id]}", :class => 'action'}
+  = form_for :action, :url => { :controller => 'actions', :action => 'create' } do |action|
+    .fieldset
+      %label Exercise
+      %select{:id => "exercise_name_#{params[:id]}", :name => "exercise[name][#{params[:id]}]", :onchange => "workoutsBlock.selectExercise(this,#{params[:id]});"}
+        %option Select...
+        %option
+        %option{:class => 'weight title'} Weight Exercises
+        - @exercises[:weight].each do |exercise|
+          %option{:class => 'weight', :value => exercise.id}= exercise.name
+        %option
+        %option{:class => 'cardio title'} Cardio Exercises
+        - @exercises[:cardio].each do |exercise|
+          %option{:class => 'cardio', :value => exercise.id}= exercise.name
+       
+    .fieldset
+      %label{:class => 'weight_label'} Weight
+      %label{:class => 'cardio_label', :style => 'display:none;'} Duration
+      = text_field 'value_1', {}, :class => 'short'
+    .fieldset
+      %label{:class => 'weight_label'} Reps
+      %label{:class => 'cardio_label', :style => 'display:none;'} Distance
+      = text_field 'value_2', {}, :class => 'short'
+    .fieldset
+      %label{:class => 'weight_label'} Sets
+      %label{:class => 'cardio_label', :style => 'display:none;'} Avg. Heart Rate
+      = text_field 'value_3', {}, :class => 'short'
+    .fieldset
+      %label Notes
+      = text_field 'notes', {}
+    .options
+      = link_to(image_tag('/images/icons/add.png'), {}, :onclick => "workoutsBlock.addAction(); return false;")
+      = link_to 'Save and Add Another', {}, :onclick => "workoutsBlock.addAction(); return false;"
+      = link_to(image_tag('/images/icons/delete.png'), {}, :onclick => "workoutsBlock.deleteAction('action_#{params[:id]}'); return false;")
+      = link_to 'Done', {}, :onclick => 'workoutsBlock.done(); return false;'

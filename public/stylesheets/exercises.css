@@ -1,0 +1,33 @@
+table#list .name {
+  width: 35%; }
+table#list .actions {
+  width: 50px;
+  text-align: right; }
+
+#type {
+  text-align: left;
+  font-size: 90%;
+  margin: 5px 0; }
+  #type img {
+    vertical-align: top;
+    margin: 0 4px 0 0;
+    border: 0; }
+
+p#description {
+  font-size: 90%; }
+  p#description .blank {
+    display: block;
+    margin: 1em 0 4em; }
+
+#options .add {
+  text-align: right; }
+#options .edit_bar {
+  text-align: right;
+  overflow: auto;
+  padding: 1px; }
+#options .edit_bar {
+  clear: both; }
+  #options .edit_bar .back {
+    float: left; }
+  #options .edit_bar .edit {
+    float: right; }

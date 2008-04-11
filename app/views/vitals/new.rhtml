@@ -1,0 +1,16 @@
+<% unless @intro.blank? %>
+  <%= render :partial => 'shared/intro', :locals => { :title => 'Your Vitals', :body => @intro } %>
+<% end %>
+
+<div id="title">
+  <h1>Add Vitals</h1>
+  <%= render :partial => 'shared/nav', :locals => { :options => [ { :label => 'View all Vitals', :icon => 'book_open', :link => url_for(:action => 'index') } ] } %>
+</div>
+
+<div id="errors">
+  <%= error_messages_for :vital %>
+</div>
+
+<% form_for :vital, :url => { :action => 'create' }, :html => { :id => 'vitals_form' } do |form| %>
+  <%= render :partial => 'form', :locals => { :form => form, :vital => @vital, :help => @help } %>
+<% end %>
